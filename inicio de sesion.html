@@ -1,0 +1,73 @@
+<!doctype html><!-- Define el documento como HTML5 -->
+<html lang="es"> <!-- Define el idioma del documento como español --> 
+ <head> 
+  <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la meta viewport para la responsividad --> 
+  <title>Inicio de Sesión</title> <!-- Define el título de la página --> 
+  <style>
+        body {             /* Estilos para el cuerpo del documento */
+            font-family: Arial, sans-serif; /* Define la fuente */
+            background-color:   #E1E1E1; /* Define el color de fondo */
+            display: flex; /* Habilita el diseño flexbox */
+            justify-content: center; /* Centra los elementos horizontalmente */
+            align-items: center; /* Centra los elementos verticalmente */
+            height: 100vh; /* Ocupa toda la altura de la ventana */
+        }
+        .login-container { /* Estilos para el contenedor del formulario de login */
+            background-color: white; /* Define el color de fondo */
+            padding: 20px; /* Añade relleno interno */
+            border-radius: 5px; /* Define el radio de las esquinas */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra */
+            text-align: auto; /* Centra el texto dentro del contenedor */
+        }
+        h2 {             /* Estilos para los encabezados H2 */
+            margin-bottom: 20px; /* Añade margen inferior */
+            text-align: center;
+        }
+        input[type="text"], input[type="password"] { /* Estilos para los campos de texto y contraseña */
+            width: 100%; /* Ocupa todo el ancho disponible */
+            padding: 10px; /* Añade relleno interno */
+            margin: 10px 0; /* Añade margen superior e inferior */
+            border: 1px solid #ccc; /* Define el borde */
+            border-radius: 5px; /* Define el radio de las esquinas */
+        }
+        input[type="submit"], .register-button { /* Estilos para los botones de enviar y registrarse */
+            background-color: #5cb85c; /* Define el color de fondo del botón de inicio de sesión */
+            color: white; /* Define el color del texto */
+            border: none; /* Elimina el borde */
+            padding: 10px; /* Añade relleno interno */
+            border-radius: 5px; /* Define el radio de las esquinas */
+            cursor: pointer; /* Cambia el cursor a una mano al pasar el ratón */
+            margin: 10px 5px; /* Añade margen superior, inferior y entre botones */
+            flex: 1; /* Permite que los botones ocupen el espacio disponible */
+        }
+        .register-button{ /* Estilos específicos para el botón de registrarse */
+            background-color: #007bff; /* Define el color de fondo */
+        }
+        input[type="submit"]:hover { /* Estilos para el botón de enviar al pasar el ratón */
+            background-color: #4cae4c; /* Cambia el color de fondo al pasar el ratón */
+        }
+        .register-button:hover { /* Estilos para el botón de registrarse al pasar el ratón */
+            background-color: #0056b3; /* Cambia el color de fondo al pasar el ratón */
+        }
+        .button-container { /* Estilos para el contenedor de botones */
+            display: flex; /* Habilita el diseño flexbox */
+            justify-content: center; /* Centra los elementos horizontalmente */
+        }
+
+    </style> 
+ </head> 
+ <body> 
+  <div class="login-container"> <!-- Contenedor principal del formulario --> 
+   <h2>Inicio de Sesión</h2> <!-- Encabezado del formulario --> 
+   <form action="/ruta/a/tu/servidor" method="POST"> <!-- Formulario de inicio de sesión --> <label for="username">Nombre de Usuario:</label> <!-- Etiqueta para el campo de nombre de usuario --> 
+    <input type="text" id="username" name="username" required> <!-- Campo de texto para el nombre de usuario --> <label for="password">Contraseña:</label> <!-- Etiqueta para el campo de contraseña --> 
+    <input type="password" id="password" name="password" required> <!-- Campo de contraseña --> 
+    <div class="button-container"> <!-- Contenedor para los botones de acción --> 
+     <input type="submit" value="Iniciar Sesión"> <!-- Botón para enviar el formulario --> 
+     <input type="button" class="register-button" value="Registrarse" onclick="window.location.href='/ruta/a/registro'"> <!-- Botón para ir a la página de registro --> 
+    </div> 
+   </form> 
+  </div> 
+ </body>
+</html>
